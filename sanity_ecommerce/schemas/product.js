@@ -1,0 +1,41 @@
+export default {
+    name: 'product',
+    title: 'Produto',
+    type: 'document',
+    fields: [
+        {
+            name: 'image',
+            title: 'Imagem',
+            type: 'array',
+            of: [{ type: 'image' }],
+            options:{
+                hotspot: true,
+            }
+        },
+        {
+
+            name: 'name',
+            title: 'Nome do Produto',
+            type: 'string',
+        },
+        {
+         name:'slug',
+         title: 'Slug',
+                type: 'slug',
+                options: {
+                source: 'name',
+                maxLenght: 90,
+                }
+        },
+        {
+            name: 'price',
+            title: 'Preço',
+            type: 'number',
+        },
+        {
+            name: 'details',
+            title: 'Detalhes',
+            type: 'string',
+        }
+    ]
+}
